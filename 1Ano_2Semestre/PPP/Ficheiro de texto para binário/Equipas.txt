@@ -1,0 +1,101 @@
+Academica
+Fnatic
+G2Esports
+Sporting
+Porto
+Ajax
+EdgarClube
+Boavista
+Mirandense
+Benfica
+Jogos
+Academica - Fnatic 355-78
+Academica - G2Esports 65-96
+Academica - Sporting 69-71
+Academica - Porto 23-92
+Academica - Ajax 72-65
+Academica - EdgarClube 98-99
+Academica - Boavista 72-32
+Academica - Mirandense 93-83
+Academica - Benfica 63-52
+Fnatic - G2Esports 57-32
+Fnatic - Sporting 11-87
+Fnatic - Porto 67-54
+Fnatic - Ajax 76-75
+Fnatic - EdgarClube 89-70
+Fnatic - Boavista 40-41
+Fnatic - Mirandense 89-76
+Fnatic - Benfica 60-59
+G2Esports - Sporting 70-32
+G2Esports - Porto 60-78
+G2Esports - Ajax 80-60
+G2Esports - EdgarClube 80-64
+G2Esports - Boavista 96-104
+G2Esports - Mirandense 50-70
+G2Esports - Benfica 90-87
+Sporting - Porto 80-32
+Sporting - Ajax 32-45
+Sporting - EdgarClube 60-72
+Sporting - Boavista 87-60
+Sporting - Mirandense 98-99
+Sporting - Benfica 86-52
+Porto - Ajax 45-79
+Porto - EdgarClube 72-61
+Porto - Boavista 90-85
+Porto - Mirandense 42-90
+Porto - Benfica 30-53
+Ajax - EdgarClube 80-40
+Ajax - Boavista 50-79
+Ajax - Mirandense 87-43
+Ajax - Benfica 105-60
+EdgarClube - Boavista 80-32
+EdgarClube - Mirandense 93-70
+EdgarClube - Benfica 57-71
+Boavista - Mirandense 57-58
+Boavista - Benfica 94-42
+Mirandense - Benfica 72-60
+Academica - Fnatic 92-108
+Academica - G2Esports 35-76
+Academica - Sporting 109-79
+Academica - Porto 86-52
+Academica - Ajax 72-95
+Academica - EdgarClube 38-59
+Academica - Boavista 72-62
+Academica - Mirandense 27-54
+Academica - Benfica 87-46
+Fnatic - G2Esports 23-62
+Fnatic - Sporting 77-96
+Fnatic - Porto 78-38
+Fnatic - Ajax 57-92
+Fnatic - EdgarClube 85-40
+Fnatic - Boavista 89-74
+Fnatic - Mirandense 49-65
+Fnatic - Benfica 70-48
+G2Esports - Sporting 80-39
+G2Esports - Porto 67-84
+G2Esports - Ajax 92-57
+G2Esports - EdgarClube 40-74
+G2Esports - Boavista 98-78
+G2Esports - Mirandense 54-12
+G2Esports - Benfica 89-64
+Sporting - Porto 80-53
+Sporting - Ajax 54-12
+Sporting - EdgarClube 64-79
+Sporting - Boavista 93-58
+Sporting - Mirandense 53-76
+Sporting - Benfica 69-98
+Porto - Ajax 45-23
+Porto - EdgarClube 92-51
+Porto - Boavista 32-95
+Porto - Mirandense 22-80
+Porto - Benfica 88-23
+Ajax - EdgarClube 90-70
+Ajax - Boavista 69-59
+Ajax - Mirandense 77-75
+Ajax - Benfica 95-90
+EdgarClube - Boavista 70-30
+EdgarClube - Mirandense 90-80
+EdgarClube - Benfica 76-80
+Boavista - Mirandense 87-28
+Boavista - Benfica 60-90
+Mirandense - Benfica 77-54

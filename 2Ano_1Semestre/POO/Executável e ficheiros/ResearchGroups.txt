@@ -1,0 +1,6 @@
+Adaptive Computation # AC
+Cognitive and Media Systems # CMS
+Evolutionary and Complex Systems # ECOS
+Information Systems # IS
+Communications and Telematics # LCT
+Software and Systems Engineering # SSE

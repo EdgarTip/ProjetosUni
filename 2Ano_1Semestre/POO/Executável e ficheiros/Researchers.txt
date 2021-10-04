@@ -1,0 +1,36 @@
+LEADER # Jorge Henriques # jh@dei.uc.pt # Adaptive Computation # 100 # 912323123
+LEADER # Penousal Machado # machado@dei.uc.pt # Cognitive and Media Systems # 101 # 918234572
+LEADER # Nuno Lourenco # naml@dei.uc.pt # Evolutionary and Complex Systems # 102 # 913242324
+LEADER # Licinio Roque # lir@dei.uc.pt # Information Systems # 103 # 912349567
+LEADER # Paulo Simoes # psimoes@dei.uc.pt # Communications and Telematics # 104 # 968767621
+LEADER # Henrique Madeira # henrique@dei.uc.pt # Software and Systems Engineering # 105 # 914876214
+EFFECTIVE # Alberto Cardoso # alberto@dei.uc.pt # Adaptive Computation # 106 # 987656897
+EFFECTIVE # Antonio Dourado # dourado@dei.uc.pt # Adaptive Computation # 107 # 987098098
+EFFECTIVE # Bernardete Ribeiro # bribeiro@dei.uc.pt # Adaptive Computation # 108 # 972345679
+EFFECTIVE # Maryam Abbasi # maryam@dei.uc.pt # Adaptive Computation # 109 # 987672491
+EFFECTIVE # Ana Boavida # aboavida@dei.uc.pt # Cognitive and Media Systems # 110 # 987657652
+EFFECTIVE # Rui Pedro Paiva # ruipedro@dei.uc.pt # Cognitive and Media Systems # 111 # 987234595
+EFFECTIVE # Pedro Manuel Henriques da Cunha Abreu # pha@dei.uc.pt#Cognitive and Media Systems # 160 # 934235810
+EFFECTIVE # Rui Gomes # ruig@dei.uc.pt # Cognitive and Media Systems # 112 # 987238495
+EFFECTIVE # Bruno Cabral # bcabral@dei.uc.pt # Software and Systems Engineering # 113 # 987234823
+EFFECTIVE # Joao Paulo de Sousa Ferreira Fernandes # jpf@dei.uc.pt # Software and Systems Engineering # 114 # 987672341
+EFFECTIVE # Mario Alberto Zenha-Rela # mzrela@dei.uc.pt # Software and Systems Engineering # 115 # 987659871
+EFFECTIVE # Bruno Sousa # bmsousa@dei.uc.pt # Communications and Telematics # 116 # 987612341
+EFFECTIVE # Marilia Curado # marilia@dei.uc.pt # Communications and Telematics # 161 # 982424242
+EFFECTIVE # Edmundo Monteiro # edmundo@dei.uc.pt # Communications and Telematics # 117 # 912376548
+EFFECTIVE # Tiago Cruz # tjcruz@dei.uc.pt # Communications and Telematics # 118 # 987687657
+EFFECTIVE # Joao Barata # barata@dei.uc.pt # Information Systems # 119 # 987676567
+EFFECTIVE # Jorge C. S. Cardoso # jorgecardoso@dei.uc.pt # Information Systems # 120 # 917382019
+EFFECTIVE # Joao Correia # jncor@dei.uc.pt # Evolutionary and Complex Systems # 121 # 987212560
+EFFECTIVE # Leonor Isabel de Albuquerque Melo # leonor@dei.uc.pt # Evolutionary and Complex Systems # 122 # 918273465
+STUDENT # Diogo Pessoa # dpessoa@dei.uc.pt # Adaptive Computation # Automatic Classification of Ultrasonic Vocalizations in Rodents: a Neurodevelopmental Study # 1/7/2021 # Antonio Dourado
+STUDENT # Alexandre D. Jesus # ajesus@dei.uc.pt # Adaptive Computation#Implicit Enumeration for Representation Systems in Multi-objective Optimization # 7/7/2022 # Alberto Cardoso
+STUDENT # Bruna Sousa # bruna@dei.uc.pt # Cognitive and Media Systems#Design Computacional de Genericos # 13/4/2021 # Rui Pedro Paiva
+STUDENT # Joao Goncalves # jcfgonc@gmail.com # Cognitive and Media Systems # Development of Support Vector Machines in Graphics Processing Units for Pattern Recognition # 3/2/2021 # Ana Boavida
+STUDENT # Joao Rodrigues Campos # jrcampos@dei.uc.pt # Software and Systems Engineering # Prediction of Mitochondrial Toxicity Indexes for Pharmacological Compounds # 23/7/2023 # Bruno Cabral
+STUDENT # Jose Flora # jeflora@dei.uc.pt # Software and Systems Engineering # Container-level Intrusion Detection for Multi-tenant Environments # 14/3/2021 # Bruno Cabral
+STUDENT # Joao T. Fernandes # joaonf@dei.uc.pt # Communications and Telematics # Using Low Cost Embedded Systems for Lung Sounds Auscultation and Analysis # 18/2/2021 # Tiago Cruz
+STUDENT # Noe Godinho # noe@dei.uc.pt # Communications and Telematics # Algorithms for the Min-Max Regret Minimum Spanning Tree Problem # 27/3/2022 # Bruno Sousa
+STUDENT # Dina Soeiro # disoeiro@esec.pt # Information Systems # e-Portfolio: Aprendizagem e Avaliacao Partilhadas em e-Learning # 29/8/2021 # Joao Barata
+STUDENT # Jose Campos # jcampos@di.estv.ipv.pt # Information Systems # Serendipidade e Sistemas de Informacao # 9/11/2021 # Joao Barata
+STUDENT # Victor Costa # vfc@dei.uc.pt # Evolutionary and Complex Systems#Using Skill Rating as Fitness on the Evolution of GANs #3/11/2022 # Joao Correia
