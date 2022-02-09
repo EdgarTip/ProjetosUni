@@ -1,0 +1,97 @@
+drop table versao_antiga cascade;
+drop table utilizador cascade;
+drop table leilao cascade;
+drop table licitacao cascade;
+drop table artigo cascade;
+drop  table mensagem cascade;
+drop table notificacao_licitacao cascade;
+drop table notificacao_mensagem cascade;
+
+
+
+CREATE TABLE utilizador (
+	username VARCHAR(512),
+	email	 VARCHAR(512) NOT NULL,
+	password VARCHAR(512) NOT NULL,
+	PRIMARY KEY(username)
+);
+
+CREATE TABLE leilao (
+	leilaoid		 SERIAL,
+	precominimo	 BIGINT NOT NULL,
+	maioroferta	 BIGINT,
+	titulo		 VARCHAR(512) NOT NULL,
+	descricao		 VARCHAR(512) NOT NULL,
+	tempofinal		 TIMESTAMP NOT NULL,
+	vencedor		 VARCHAR(512),
+	artigo_artigoid	 BIGINT NOT NULL,
+	utilizador_username VARCHAR(512) NOT NULL,
+	PRIMARY KEY(leilaoid)
+);
+
+CREATE TABLE licitacao (
+	valor		 BIGINT NOT NULL,
+	id			 SERIAL,
+	data		 TIMESTAMP NOT NULL,
+	utilizador_username VARCHAR(512) NOT NULL,
+	leilao_leilaoid	 BIGINT NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE versao_antiga (
+	versao		 SERIAL,
+	descricao	 VARCHAR(512) NOT NULL,
+	titulo		 VARCHAR(512) NOT NULL,
+	data		 TIMESTAMP NOT NULL,
+	leilao_leilaoid BIGINT NOT NULL,
+	PRIMARY KEY(versao)
+);
+
+CREATE TABLE notificacao_mensagem (
+	mensagem_id	 BIGINT NOT NULL,
+	utilizador_username VARCHAR(512) NOT NULL,
+	notificacao_id	 SERIAL,
+	notificacao_visto	 BOOL NOT NULL DEFAULT false,
+	notificacao_data	 TIMESTAMP NOT NULL,
+	notificacao_texto	 VARCHAR(512),
+	PRIMARY KEY(notificacao_id)
+);
+
+CREATE TABLE mensagem (
+	texto		 VARCHAR(512),
+	id			 SERIAL,
+	data		 TIMESTAMP NOT NULL,
+	leilao_leilaoid	 BIGINT NOT NULL,
+	utilizador_username VARCHAR(512) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE notificacao_licitacao (
+	utilizador_username VARCHAR(512) NOT NULL,
+	licitacao_id	 BIGINT NOT NULL,
+	notificacao_id	 SERIAL,
+	notificacao_visto	 BOOL NOT NULL DEFAULT false,
+	notificacao_data	 TIMESTAMP NOT NULL,
+	notificacao_texto	 VARCHAR(512),
+	PRIMARY KEY(notificacao_id)
+);
+
+CREATE TABLE artigo (
+	artigoid	 BIGINT,
+	descricao VARCHAR(512) NOT NULL,
+	PRIMARY KEY(artigoid)
+);
+
+ALTER TABLE leilao ADD CONSTRAINT leilao_fk1 FOREIGN KEY (artigo_artigoid) REFERENCES artigo(artigoid);
+ALTER TABLE leilao ADD CONSTRAINT leilao_fk2 FOREIGN KEY (utilizador_username) REFERENCES utilizador(username);
+ALTER TABLE leilao ADD CONSTRAINT constraint_0 CHECK (maiorOferta >= precoMinimo);
+ALTER TABLE licitacao ADD CONSTRAINT licitacao_fk1 FOREIGN KEY (utilizador_username) REFERENCES utilizador(username);
+ALTER TABLE licitacao ADD CONSTRAINT licitacao_fk2 FOREIGN KEY (leilao_leilaoid) REFERENCES leilao(leilaoid);
+ALTER TABLE versao_antiga ADD CONSTRAINT versao_antiga_fk1 FOREIGN KEY (leilao_leilaoid) REFERENCES leilao(leilaoid);
+ALTER TABLE notificacao_mensagem ADD CONSTRAINT notificacao_mensagem_fk1 FOREIGN KEY (mensagem_id) REFERENCES mensagem(id);
+ALTER TABLE notificacao_mensagem ADD CONSTRAINT notificacao_mensagem_fk2 FOREIGN KEY (utilizador_username) REFERENCES utilizador(username);
+ALTER TABLE mensagem ADD CONSTRAINT mensagem_fk1 FOREIGN KEY (leilao_leilaoid) REFERENCES leilao(leilaoid);
+ALTER TABLE mensagem ADD CONSTRAINT mensagem_fk2 FOREIGN KEY (utilizador_username) REFERENCES utilizador(username);
+ALTER TABLE notificacao_licitacao ADD CONSTRAINT notificacao_licitacao_fk1 FOREIGN KEY (utilizador_username) REFERENCES utilizador(username);
+ALTER TABLE notificacao_licitacao ADD CONSTRAINT notificacao_licitacao_fk2 FOREIGN KEY (licitacao_id) REFERENCES licitacao(id);
+ALTER TABLE artigo ADD CONSTRAINT ISBN CHECK (artigoId>=1000000000000 and artigoId <=9999999999999);

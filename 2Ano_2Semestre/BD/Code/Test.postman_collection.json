@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "08f53d3c-6543-4c29-a0c9-12c17e931f2d",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registar Utilizador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user?username=&email=&password=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": ""
+						},
+						{
+							"key": "email",
+							"value": ""
+						},
+						{
+							"key": "password",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar Utilizador",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar leilão",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/leilao?artigoId=1000000000000&descricaoArtigo=&precoMinimo=&titulo=&descricaoLeilao=&tempofinal=2021-05-30 22:25:00.74200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"leilao"
+					],
+					"query": [
+						{
+							"key": "artigoId",
+							"value": "1000000000000"
+						},
+						{
+							"key": "descricaoArtigo",
+							"value": ""
+						},
+						{
+							"key": "precoMinimo",
+							"value": ""
+						},
+						{
+							"key": "titulo",
+							"value": ""
+						},
+						{
+							"key": "descricaoLeilao",
+							"value": ""
+						},
+						{
+							"key": "tempofinal",
+							"value": "2021-05-30 22:25:00.74200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar leilões",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/leiloes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"leiloes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar leilões",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/leiloes/faca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"leiloes",
+						"faca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar leilão",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/leilao/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"leilao",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar leilões atividade",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user/leiloes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user",
+						"leiloes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Efetuar licitação",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/licitar/2/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"licitar",
+						"2",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar leilão",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/leilao/1?titulo=&descricao=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"leilao",
+						"1"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": ""
+						},
+						{
+							"key": "descricao",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Escrever mensagem",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/mural/2?mensagem=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"mural",
+						"2"
+					],
+					"query": [
+						{
+							"key": "mensagem",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caixa Entrada",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/user/caixa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user",
+						"caixa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terminar leilões",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dbproj/terminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"terminar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

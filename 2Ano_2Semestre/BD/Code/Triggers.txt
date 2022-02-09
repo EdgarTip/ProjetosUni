@@ -1,0 +1,131 @@
+drop trigger if exists mensagem_notif on mensagem;
+drop trigger if exists licitacao_notif on licitacao;
+drop trigger if exists versao_antiga on leilao;
+
+CREATE OR REPLACE FUNCTION mensagem_update() RETURNS trigger AS  $mensagem_update$
+
+declare
+
+v_leilaoid numeric := 0;
+v_username mensagem.utilizador_username%type;
+v_vendedor leilao.utilizador_username%type;
+vendor_notified boolean := false;
+
+c2 cursor for 
+	select distinct(utilizador_username)
+	from mensagem
+	where leilao_leilaoid = new.leilao_leilaoid;
+	
+c3 cursor for
+	select utilizador_username
+	from leilao
+	where leilaoid = new.leilao_leilaoid;
+	
+    BEGIN
+		open c3;
+		
+		fetch c3 into v_vendedor;
+		if v_vendedor is NULL then
+			return new;
+		end if;
+		
+		
+		open c2;
+		loop
+			fetch c2 into v_username;
+			
+			exit when not found;
+			if v_username = v_vendedor then 
+				vendor_notified = true;
+			end if;
+			
+			continue when v_username = new.utilizador_username;
+			
+			insert into notificacao_mensagem values(new.id, v_username,  default, false, now(), concat('Nova mensagem no leilao ', new.leilao_leilaoid, ' de ', new.utilizador_username, ':', new.texto)) ;
+
+			
+		end loop;
+		
+		if vendor_notified = false then 
+			insert into notificacao_mensagem values(new.id, v_vendedor,  default, false, now(), concat('Nova mensagem no leilao ', new.leilao_leilaoid, ' de ', new.utilizador_username, ':', new.texto)) ;
+		end if;
+
+		
+		close c2;
+		close c3;
+        RETURN new;
+
+    END;
+	
+$mensagem_update$ LANGUAGE plpgsql;
+
+CREATE TRIGGER mensagem_notif
+AFTER INSERT on mensagem
+FOR EACH ROW EXECUTE PROCEDURE mensagem_update();
+
+
+/* =================================== */
+
+
+CREATE OR REPLACE FUNCTION leilao_notif() RETURNS trigger AS  $leilao_notif$
+
+
+declare
+
+v_leilaoid numeric := 0;
+v_valorlicitacao numeric :=0;
+v_username licitacao.utilizador_username%type;
+
+c1 cursor for 
+	
+	select leilao_leilaoid, MAX(valor), utilizador_username
+	from licitacao
+	group by leilao_leilaoid, utilizador_username
+	having leilao_leilaoid = new.leilao_leilaoid
+	order by MAX(valor) desc;
+	
+    BEGIN
+		
+		open c1;
+		fetch c1 into v_leilaoid, v_valorlicitacao, v_username;
+			
+		fetch c1 into v_leilaoid, v_valorlicitacao, v_username;
+		
+		if v_username is NULL or v_username = new.utilizador_username then
+			RETURN new;
+		end if;
+		
+		insert into notificacao_licitacao values  (v_username,  new.id,  default, false, now(), concat('A sua licitação no leilão ', new.leilao_leilaoid, ' foi ultrapassada!')) ;
+		
+		close c1;
+        RETURN new;
+
+    END;
+	
+$leilao_notif$ LANGUAGE plpgsql;
+
+CREATE TRIGGER licitacao_notif
+AFTER INSERT on licitacao
+FOR EACH ROW EXECUTE PROCEDURE leilao_notif();
+
+
+/* =================================== */
+
+
+CREATE OR REPLACE FUNCTION leilao_update() RETURNS trigger AS  $leilao_update$
+
+    BEGIN
+
+        insert into versao_antiga values(default,  old.descricao, old.titulo, now(), old.leilaoid) ;
+        RETURN OLD;
+
+    END;
+
+$leilao_update$ LANGUAGE plpgsql;
+
+CREATE TRIGGER versao_antiga
+AFTER UPDATE of descricao,titulo on leilao
+FOR EACH ROW EXECUTE PROCEDURE leilao_update();
+
+
+
