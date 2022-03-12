@@ -1,6 +1,7 @@
 # ProjetosUni
 
 Objective: create a scenario where the utilization of many arduinos is required.
+<br>
 Execution: We created a theoretical model to increase current roller coaster throughput in which many arduinos and sensors work together so that a roller coaster can have the maximum cars on the track concurrently.
 
 <br>
