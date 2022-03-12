@@ -6,4 +6,5 @@ Implementation: With the help of a text file we create a linked list with all th
 <br>
 Author:
 <ol>
-  <li> Edgar Duarte (@EdgarTip)
+  <li> Edgar Duarte (@EdgarTip) </li>
+</ol>
