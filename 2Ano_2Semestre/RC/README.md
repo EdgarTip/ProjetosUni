@@ -1,7 +1,10 @@
 # ProjetosUni
 
-Projeto de RC. Objetivo: criar troca de mensagens entre computadores diferentes através de várias formas (P2P, Multicast e Client-Server).
+Objective: create a basic networks between computers (multicast, P2P and Client-server). There is another repository with this project: https://github.com/MigDinny/ProjectRC
+
 <br>
-Projeto desenvolvido com:
-<br>
-- Miguel Dinis (MigDinny)
+Authors:
+<ol>
+  <li> Edgar Duarte (@EdgarTip) </li>
+  <li> Miguel Dinis (@MigDinny) </li>
+</ol>

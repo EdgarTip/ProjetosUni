@@ -1,5 +1,10 @@
 # ProjetosUni
 
-Projeto de POO. Objetivo: criar um gestor do CISUC.
+Objective: create an application to manage CISUC publications using OOP
 <br>
-Projeto desenvolvido sozinho :(
+Implementation: Creation of multiple classes that represent the different objects in the CISUC environment and via polymorphism and inheretance create a network of methods that allow to meet the requirements asked
+<br>
+Author:
+<ol>
+  <li> Edgar Duarte (@EdgarTip) </li>
+</ol>

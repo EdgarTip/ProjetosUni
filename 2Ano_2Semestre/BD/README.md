@@ -1,7 +1,11 @@
 # ProjetosUni
 
-Projeto de BD. Objetivo: criar um gestor de leilões.
+Objective: create the backend of a auctions application
 <br>
-Projeto desenvolvido com:
+Implementation: We used Flask to be the API and via the use of triggers and function calls implemented all the requirements
 <br>
-- Pedro Ferreira (iceD00G)
+Authors:
+<ol>
+  <li> Edgar Duarte (@EdgarTip) </li>
+  <li> Pedro Ferreira (@iceD00G) </li>
+</ol>

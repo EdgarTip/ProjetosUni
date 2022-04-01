@@ -1,8 +1,11 @@
 # ProjetosUni
 
-Projeto de TI. Objetivo: criar um compressor novo. Existe um repositório público com este projeto.
+Objective: create a new non-destructive image compressor. There is another public repository with this project: https://github.com/EdgarTip/prototype-compressor
+
 <br>
-Projeto desenvolvido com:
-<br>
-- Miguel Dinis (MigDinny)
-- Rodrigo Ferreira (IronFalcon0)
+Authors:
+<ol>
+  <li> Edgar Duarte (@EdgarTip) </li>
+  <li> Miguel Dinis (@MigDinny) </li>
+  <li> Rodrigo Ferreira (@IronFalcon0)
+</ol>
