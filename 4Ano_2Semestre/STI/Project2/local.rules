@@ -1,0 +1,38 @@
+# Copyright 2001-2023 Sourcefire, Inc. All Rights Reserved.
+#
+# This file contains (i) proprietary rules that were created, tested and certified by
+# Sourcefire, Inc. (the "VRT Certified Rules") that are distributed under the VRT
+# Certified Rules License Agreement (v 2.0), and (ii) rules that were created by
+# Sourcefire and other third parties (the "GPL Rules") that are distributed under the
+# GNU General Public License (GPL), v2.
+# 
+# The VRT Certified Rules are owned by Sourcefire, Inc. The GPL Rules were created
+# by Sourcefire and other third parties. The GPL Rules created by Sourcefire are
+# owned by Sourcefire, Inc., and the GPL Rules not created by Sourcefire are owned by
+# their respective creators. Please see http://www.snort.org/snort/snort-team/ for a
+# list of third party owners and their respective copyrights.
+# 
+# In order to determine what rules are VRT Certified Rules or GPL Rules, please refer
+# to the VRT Certified Rules License Agreement (v2.0).
+#
+#-------------
+# LOCAL RULES
+#-------------
+
+# SQL INJECTIONS
+drop tcp any any -> 192.168.10.253 any (msg:"SQL injection detected"; content:"drop table"; sid:100001; rev:1;)
+#drop tcp any any -> 192.168.10.253 any (msg:"SQL injection detected"; pcre:"/w*((%27)|('))((%6F)|o|(%4F))((%72)|r|(%52))/i"; sid:100001; rev:1;)
+drop tcp any any -> 192.168.10.253 any (msg:"UNION SQL injection detected";content:"UNION SELECT";sid:100002; rev:1;)
+
+#DoS ATTACK
+
+alert udp any any -> 192.168.10.253 any (msg:"ALERT UDP Flood"; threshold:type both, track by_dst, count 15, seconds 3; sid:1000001; rev:1;)
+alert tcp any any -> 192.168.10.253 any (msg:"ALERT TCP Flood"; threshold:type both, track by_dst, count 15, seconds 3; sid:1000005; rev:1;)
+
+
+#OS fingerprinting
+
+#alert tcp any any -> any any (flags:S; seq:1000; ack:0; window:5840; ttl:64; content:"Linux"; depth:5; msg:"Possible Linux OS Fingerprinting Attempt"; sid:1000003; rev:1;)
+alert tcp any any -> any 22 (msg:"Linux OS Fingerprint Detected"; flow:to_server,established; content:"SSH-"; depth:4; sid:1000009; rev:1;)
+alert tcp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; flags:S;reference:url,nmap.org; sid:1000003; rev:1;)
+

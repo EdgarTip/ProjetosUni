@@ -2,7 +2,7 @@
 
 Objective: create the backend of a auctions application
 <br>
-Implementation: We used Flask to be the API and via the use of triggers and function calls implemented all the requirements
+Implementation: We used Flask as a framework for the API and via the use of triggers and function calls implemented all the requirements
 <br>
 Authors:
 <ol>
